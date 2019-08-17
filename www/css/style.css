@@ -1,0 +1,14 @@
+/**/
+.input-login{
+    border-bottom: 1px solid #504D69 !important;
+    margin-right: 20px !important;
+}
+
+.dados-perfil p{
+	margin: 0 !important;
+	color:#504D69 !important;
+}
+
+.dados-perfil h5{
+	margin: 5px 0 5px 0;
+}

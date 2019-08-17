@@ -1,0 +1,30 @@
+<ion-view title="Login" hide-back-button="true" id="page5" hide-nav-bar="true">
+  <ion-content padding="true" class="has-header">
+    <form id="login-form1" class="list">
+      <div class="img-login">
+        <img src="img/logo.png" style="display: block; width: 80%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="spacer" style="width: 300px; height: 47px;"></div>
+      <ion-list id="login-list1">
+        <label class="item item-input" id="login-input1" style="border:none;">
+          <span class="input-label" style="width: 20%;">Email:</span>
+          <input type="email" placeholder="" class="input-login" ng-model="dados.email">
+        </label>
+        <label class="item item-input" id="login-input2" style="border:none;">
+          <span class="input-label" style="width: 20%;">Senha:</span>
+          <input type="password" placeholder="" class="input-login" ng-model="dados.senha">
+        </label>
+      </ion-list>
+      <div class="spacer" style="height: 30px;"></div>
+      <button id="login-button1" class="button button-energized button-block" ng-click="entrar()">Acessar</button>
+      <div class="spacer" style="width: 300px; height: 12px;"></div>
+      <div id="cadastreSe-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#504D69;margin:0;">
+        <strong>OU</strong>
+      </p>
+    </div>
+      <div class="spacer" style="width: 300px; height: 12px;"></div>
+      <a ui-sref="cadastreSe()" id="login-button2" class="button button-dark button-block">Cadastra-se</a>
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,85 @@
+<ion-view title="Editar Perfil" id="page7" ng-init="init()">
+  <ion-content padding="true" class="has-header">
+    <form id="editarPerfil-form2" class="list">
+      <label class="item item-input" id="editarPerfil-input4">
+        <span class="input-label"><b>Nome:</b></span>
+        <input placeholder="" type="text" ng-model="dados.lista_user.usuario.user_name">
+      </label>
+      <label class="item item-input" id="editarPerfil-input5">
+        <span class="input-label"><b>Sobrenome:</b></span>
+        <input placeholder="" type="text" ng-model="dados.lista_user.usuario.user_lastname">
+      </label>
+      <label class="item item-input" id="editarPerfil-input6">
+        <span class="input-label"><b>Fone:</b></span>
+        <input placeholder="" type="text" ng-model="dados.lista_user.usuario.user_telefone">
+      </label>
+      <label class="item item-input" id="editarPerfil-input10" ng-show="dados.lista_user.usuario.type == 1">
+        <span class="input-label"><b>Data Nasc.:</b></span>
+        <input placeholder="" type="date"  ng-model="dados.lista_user.usuario.user_nascimento">
+      </label>
+      <label class="item item-input" id="editarPerfil-input7">
+        <span class="input-label"><b>CEP:</b></span>
+        <input placeholder="" type="text" ng-model="dados.lista_user.usuario.user_cep">
+      </label>
+      <div id="editarPerfil-markdown24" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">{{dados.lista_user.usuario.user_bairro}} - {{dados.lista_user.usuario.user_city}}/{{dados.lista_user.usuario.user_uf}}</p>
+      </div>
+      <label class="item item-input" id="editarPerfil-input8">
+        <span class="input-label"><b>Endereço:</b></span>
+        <input placeholder="" type="text" ng-model="dados.lista_user.usuario.user_endereco">
+      </label>
+      <label class="item item-input" id="editarPerfil-input9">
+        <span class="input-label"><b>Nº:</b></span>
+        <input placeholder="" type="text" ng-model="dados.lista_user.usuario.user_numero">
+      </label>
+      <label class="item item-select" id="editarPerfil-select1" ng-show="dados.lista_user.usuario.type == 1">
+        <span class="input-label"><b>Cor/Raça</b></span>
+        <select ng-model="dados.lista_user.usuario.cor_pele">
+          <option>Branco(a)</option>
+          <option>Pardo(a)</option>
+          <option>Preto(a)</option>
+          <option>Amarelo(a)</option>
+          <option>Indígena</option>
+        </select>
+      </label>
+      <label class="item item-select" id="editarPerfil-select2" ng-show="dados.lista_user.usuario.type == 1">
+        <span class="input-label"><b>Cor do Cabelo</b></span>
+        <select ng-model="dados.lista_user.usuario.cor_cabelo">
+          <option>Loiros</option>
+          <option>Pretos</option>
+          <option>Castanhos</option>
+          <option>Ruivos</option>
+        </select>
+      </label>
+      <label class="item item-select" id="editarPerfil-select2" ng-show="dados.lista_user.usuario.type == 1">
+        <span class="input-label"><b>Cor dos Olhos</b></span>
+        <select ng-model="dados.lista_user.usuario.cor_olhos">
+          <option>Castanhos</option>
+          <option>Verdes</option>
+          <option>Azuis</option>
+          <option>Pretos</option>
+        </select>
+      </label>
+      <label class="item item-input" id="editarPerfil-input11" ng-show="dados.lista_user.usuario.type == 1">
+        <span class="input-label"><b>Peso:</b></span>
+        <input placeholder="" type="text" ng-model="dados.lista_user.usuario.peso">
+      </label>
+      <label class="item item-input" id="editarPerfil-input12" ng-show="dados.lista_user.usuario.type == 1">
+        <span class="input-label"><b>Altura:</b></span>
+        <input placeholder="" type="text" ng-model="dados.lista_user.usuario.altura">
+      </label>
+      <label class="item item-input" id="editarPerfil-input13" ng-show="dados.lista_user.usuario.type == 1">
+        <span class="input-label"><b>Calçado:</b></span>
+        <input placeholder="" type="text" ng-model="dados.lista_user.usuario.calcado">
+      </label>
+      <ion-toggle toggle-class="toggle-energized" id="editarPerfil-toggle4" ng-model="dados.lista_user.usuario.equipamento" ng-show="dados.lista_user.usuario.type == 1"><b>Equipamento Próprio?</b></ion-toggle>
+      <ion-toggle toggle-class="toggle-energized" id="editarPerfil-toggle5" ng-model="dados.lista_user.usuario.notafiscal" ng-show="dados.lista_user.usuario.type == 1"><b>Emite Nota Fiscal?</b></ion-toggle>
+      <ion-toggle toggle-class="toggle-energized" id="editarPerfil-toggle7" ng-model="dados.lista_user.usuario.veiculoproprio" ng-show="dados.lista_user.usuario.type == 1"><b>Veículo Próprio?</b></ion-toggle>
+      <ion-toggle toggle-class="toggle-energized" id="editarPerfil-toggle6" ng-model="dados.lista_user.usuario.viajar" ng-show="dados.lista_user.usuario.type == 1"><b>Disponibilidade para Viajar?</b></ion-toggle>
+      <ion-toggle toggle-class="toggle-energized" id="editarPerfil-toggle8" ng-model="dados.lista_user.usuario.deficiencia" ng-show="dados.lista_user.usuario.type == 1"><b>Possui Alguma Deficiência?</b></ion-toggle>
+      <ion-toggle toggle-class="toggle-energized" id="editarPerfil-toggle9" ng-model="dados.lista_user.usuario.tatuagem" ng-show="dados.lista_user.usuario.type == 1"><b>Possui Alguma Tatuagem?</b></ion-toggle>
+      <button id="editarPerfil-button12" class="button button-energized button-block" ng-click="salvar()">Salvar</button>
+      <div class="spacer" style="width: 283px; height: 68px;"></div>
+    </form>
+  </ion-content>
+</ion-view>

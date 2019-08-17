@@ -1,0 +1,59 @@
+<ion-view title="Perfil" id="page4" ng-init="init()">
+
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-forward" ng-click="sair()"></button>
+  </ion-nav-buttons>
+
+  <ion-content padding="true" class="has-header">
+    <div class="img-perfil">
+      <img src="{{imgPerfil(dados.lista_user.usuario.user_cover)}}"
+      style="display: block; width: 35%; height: auto; margin-left: auto; margin-right: auto;">
+    </div>
+    <div id="perfil-markdown2" style="text-align:center;" class="show-list-numbers-and-dots text-perfil">
+      <p style="color:#504D69;">
+        <strong>{{dados.lista_user.usuario.user_name}} {{dados.lista_user.usuario.user_lastname}}</strong>
+      </p>
+    </div>
+    <ion-list id="perfil-list2">
+      <div class="item item-body dados-perfil" id="perfil-list-item-container1">        
+        <div id="perfil-markdown9" class="show-list-numbers-and-dots">
+          <h5>E-mail:</h5>
+          <p>{{dados.lista_user.usuario.user_email}}</p>
+        </div>
+        <div id="perfil-markdown8" class="show-list-numbers-and-dots">
+          <h5>Telefone:</h5>
+          <p>{{dados.lista_user.usuario.user_telefone}}</p>
+        </div>
+        <div id="perfil-markdown10" class="show-list-numbers-and-dots" ng-show="dados.lista_user.usuario.type == 1">
+          <h5>Cidade/UF:</h5>
+          <p>{{dados.lista_user.usuario.user_city}}/{{dados.lista_user.usuario.user_uf}}</p>
+        </div>
+        <div id="perfil-markdown11" class="show-list-numbers-and-dots" ng-show="dados.lista_user.usuario.type == 1">
+          <h5>Idade:</h5>
+          <p>{{idade(dados.lista_user.usuario.user_nascimento)}}</p>
+        </div>
+        <div id="perfil-markdown7" class="show-list-numbers-and-dots" ng-show="dados.lista_user.usuario.type == 1">
+          <h5>Categoria(s):</h5>
+          <p>{{dados.lista_user.categoria}}</p>
+        </div>
+        <div id="perfil-markdown12" class="show-list-numbers-and-dots" ng-show="dados.lista_user.usuario.type == 1">
+          <h5>Descrição:</h5>
+          <p>{{dados.lista_user.usuario.descricao}}</p>
+        </div>
+        <div id="perfil-markdown13" class="show-list-numbers-and-dots" ng-show="dados.lista_user.usuario.type == 1">
+          <h5>Habilidades:</h5>
+          <p>{{dados.lista_user.usuario.habilidades}}</p>
+        </div>
+        <div id="perfil-markdown14" class="show-list-numbers-and-dots" ng-show="dados.lista_user.usuario.type == 1">
+          <h5>Referências:</h5>
+          <p>{{dados.lista_user.usuario.referencias}}</p>
+        </div>
+
+      <div class="spacer" style="width: 300px; height: 22px;"></div>
+      <a ui-sref="tabs.edit()" id="editar-button4" class="button button-energized button-block">Editar Perfil</a>
+
+      </div>
+      
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,25 @@
+$energized: #D5652C;
+$dark: #504D69;
+$link-color: $dark;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+.logo-home {
+	padding: 10px;
+}
+
+.img-perfil img {
+	border-radius: 50px;
+}
+
+.text-perfil p {
+	margin-bottom: 0;
+}
+
+.dados-perfil {
+	border: none;
+}
+
+body {
+	color: #504D69;
+}
+

@@ -1,0 +1,18 @@
+<ion-view title="Jobs" id="page3" init="init()">
+  <ion-content padding="true" class="has-header">
+   
+    <ion-list id="jobs-list3">
+
+      <ion-item ng-repeat="l in dados.lista_jobs" class="item-icon-right energized" id="jobs-list-item4" 
+      href-inappbrowser="https://galeradeeventos.com.br/vagas/{{l.post_name}}"  target="_system">{{l.post_title}}
+        <span class="item-note">{{formData(l.post_data_inicio)}} {{formHora(l.post_hora_inicio)}}</span>
+        <i class="icon ion-android-calendar"></i>
+      </ion-item>
+
+    </ion-list>
+
+    <div class="spacer" style="width: 300px; height: 22px;" ng-show="dados.lista_user.usuario.type == 2"></div>
+  	<a ng-click="criarJob()" id="editar-button4" class="button button-energized button-block" ng-show="dados.lista_user.usuario.type == 2">Crie seu JOB</a>
+
+  </ion-content>
+</ion-view>
